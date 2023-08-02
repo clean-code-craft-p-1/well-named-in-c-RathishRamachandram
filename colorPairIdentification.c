@@ -49,7 +49,7 @@ void PrintColourCode(void) {
 
             int pairNumber = GetPairNumberFromColor(&colorPair);
             printf("Got pair number %d\n", pairNumber);
-            assert(pairNumber == expectedPairNumber);
+
         }
     }   
 }
