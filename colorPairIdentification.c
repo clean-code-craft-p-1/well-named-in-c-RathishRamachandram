@@ -1,4 +1,7 @@
+#include <stdbool.h>
 #include "main.h"
+
+#define isCompatible(x, type) _Generic(x, type: true, default: false)
 
 const char* MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
@@ -33,3 +36,21 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
         colorPair->minorColor + 1;
 }
+
+void PrintColourCode(void) {
+    ;
+    for (enum MajorColor major = WHITE; major < VIOLET; major++)
+    {
+        for (enum MinorColor minor = BLUE; minor < SLATE; minor++)
+        {
+            ColorPair colorPair;
+            colorPair.majorColor = major;
+            colorPair.minorColor = minor;
+
+            int pairNumber = GetPairNumberFromColor(&colorPair);
+            printf("Got pair number %d\n", pairNumber);
+            assert(pairNumber == expectedPairNumber);
+        }
+    }   
+}
+

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include <assert.h>
 
 const int MAX_COLORPAIR_NAME_CHARS = 16;
 
@@ -27,6 +26,11 @@ void testPairToNumber(
     int pairNumber = GetPairNumberFromColor(&colorPair);
     printf("Got pair number %d\n", pairNumber);
     assert(pairNumber == expectedPairNumber);
+}
+
+void testPrintManual(void)
+{
+    PrintColourCode();
 }
 
 int main() {
