@@ -38,7 +38,6 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
 }
 
 void PrintColourCode(void) {
-    ;
     for (enum MajorColor major = WHITE; major < VIOLET; major++)
     {
         for (enum MinorColor minor = BLUE; minor < SLATE; minor++)
