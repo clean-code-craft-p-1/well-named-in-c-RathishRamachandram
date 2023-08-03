@@ -47,7 +47,7 @@ void PrintColourCode(void) {
             colorPair.minorColor = minor;
 
             int pairNumber = GetPairNumberFromColor(&colorPair);
-            printf("Got pair number %d\n", pairNumber);
+            printf("Pair [%s , %s] Pair number %d\n", MajorColorNames[major], MinorColorNames[minor],pairNumber);
 
         }
     }   
