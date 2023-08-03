@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "TeleCommunicatColorCodeDetect.h"
 
 const int MAX_COLORPAIR_NAME_CHARS = 16;
 
